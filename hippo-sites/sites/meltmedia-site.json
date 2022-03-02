@@ -1,0 +1,576 @@
+{
+    "project": "meltmedia-site",
+    "environments": {
+        "desktop": {
+            "before_screenshot": {
+                "actions": [
+                    {
+                        "action": "click",
+                        "css_selector": "div #hs-eu-confirmation-button"
+                    },
+                    {
+                        "action": "scroll_window_to_position",
+                        "position_bottom": true
+                    },
+                    {
+                        "action": "sleep",
+                        "duration": 3
+                    },
+                    {
+                        "action": "scroll_window_to_position",
+                        "position_top": true
+                    },
+                    {
+                        "action": "sleep",
+                        "duration": 0.5
+                    }
+                ]
+            },
+            "pages": [
+                {
+                    "path": "/",
+                    "actions": [
+                        {
+                            "action": "scroll_window_to_position",
+                            "position_bottom": true
+                        },
+                        {
+                            "action": "capture"
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": ".menu-svg"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 2
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "menu_open"
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "div.menu-area svg"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 2
+                        },
+                        {
+                            "action": "for_each",
+                            "css_selector": ".case-study-image",
+                            "actions": [
+                                {
+                                    "action": "scroll_window_to_element",
+                                    "css_selector": ".landing-page--content>section.invert:nth-child(2)"
+                                },
+                                {
+                                    "action": "hover",
+                                    "element": true
+                                },
+                                {
+                                    "action": "sleep",
+                                    "duration": 2
+                                },
+                                {
+                                    "action": "capture",
+                                    "suffix": "case_studies_hover",
+                                    "viewport_only": true
+                                }
+                            ]
+                        },
+                        {
+                            "action": "for_each",
+                            "css_selector": ".profile",
+                            "actions": [
+                                {
+                                    "action": "scroll_window_to_element",
+                                    "css_selector": ".landing-page--content>section.invert:nth-child(4)"
+                                },
+                                {
+                                    "action": "hover",
+                                    "element": true
+                                },
+                                {
+                                    "action": "sleep",
+                                    "duration": 2
+                                },
+                                {
+                                    "action": "capture",
+                                    "suffix": "profile_hover",
+                                    "viewport_only": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "path": "/blog",
+                    "actions": [
+                        {
+                            "action": "capture"
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "[for='edit-field-category-target-id-82']"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "business_toggle",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "refresh"
+                        },
+                        
+                        {
+                            "action": "scroll_window_to_element",
+                            "css_selector": "[for='edit-field-category-target-id-83']",
+                            "position_middle": false,
+                            "position_bottom": false
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "[for='edit-field-category-target-id-83']"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "culture_toggle",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "refresh"
+                        },
+                        
+                        {
+                            "action": "sleep",
+                            "duration": 1
+                        },
+                        
+                        {
+                            "action": "scroll_window_to_element",
+                            "css_selector": "[for='edit-field-category-target-id-84']",
+                            "position_middle": false,
+                            "position_bottom": false
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "[for='edit-field-category-target-id-84']"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "design_toggle",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "refresh"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 1
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "[for='edit-field-category-target-id-85']"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "tech_toggle",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "refresh"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 1
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "[for='edit-field-category-target-id-all']"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "all_toggle",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "#edit-email"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "email_field",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "capture",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "enter_text",
+                            "css_selector": "#edit-email",
+                            "input_type": "email"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "email_enter",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": ".menu-svg"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "menu_click",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 1
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "#burger1"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "menu_exit",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "#edit-submit"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 1
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "post_hover",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "resize_browser",
+                            "width": 325,
+                            "height": 1000,
+                            "content_height": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "mobile": {
+            "browser_size": {
+                "width": 400,
+                "height": 1000
+            },
+            "pages": [
+                {
+                    "path": "/",
+                    "actions": [
+                        {
+                            "action": "scroll_window_to_position",
+                            "position_bottom": true
+                        },
+                        {
+                            "action": "capture"
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": ".menu-svg"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 2
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "menu_open"
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "div.menu-area svg"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 2
+                        },
+                        {
+                            "action": "scroll_window_to_element",
+                            "css_selector": "div section.meltmedians"
+                        },
+                        {
+                            "action": "for_each",
+                            "css_selector": ".profile",
+                            "actions": [
+                                {
+                                    "action": "scroll_window_to_element",
+                                    "css_selector": ".landing-page--content>section.invert:nth-child(4)"
+                                },
+                                {
+                                    "action": "hover",
+                                    "element": true
+                                },
+                                {
+                                    "action": "sleep",
+                                    "duration": 2
+                                },
+                                {
+                                    "action": "capture",
+                                    "suffix": "profile_hover",
+                                    "viewport_only": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "path": "/blog",
+                    "actions": [
+                        {
+                            "action": "capture"
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "[for='edit-field-category-target-id-82']"
+                        },
+                        {
+                            "action": "scroll_window_to_position",
+                            "position_top": true
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "business_toggle",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "refresh"
+                        },
+                        {
+                            "action": "scroll_window_to_element",
+                            "css_selector": "[for='edit-field-category-target-id-83']",
+                            "position_middle": false,
+                            "position_bottom": false
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "[for='edit-field-category-target-id-83']"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "culture_toggle",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "refresh"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 1
+                        },
+                        {
+                            "action": "scroll_window_to_element",
+                            "css_selector": "[for='edit-field-category-target-id-84']",
+                            "position_middle": false,
+                            "position_bottom": false
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "[for='edit-field-category-target-id-84']"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "design_toggle",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "refresh"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 1
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "[for='edit-field-category-target-id-85']"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "tech_toggle",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "refresh"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 1
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "[for='edit-field-category-target-id-all']"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "all_toggle",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "#edit-email"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "email_field",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "capture",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "enter_text",
+                            "css_selector": "#edit-email",
+                            "input_type": "email"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "email_enter",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": ".menu-svg"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "menu_click",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 1
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "#burger1"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "menu_exit",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "#edit-submit"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 1
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "post_hover",
+                            "viewport_only": false
+                        },
+                        {
+                            "action": "resize_browser",
+                            "width": 325,
+                            "height": 1000,
+                            "content_height": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "common": {
+            "before_screenshot": {
+                "actions": [
+                    {
+                        "action": "click",
+                        "css_selector": "div #hs-eu-confirmation-button"
+                    },
+                    {
+                        "action": "scroll_window_to_position",
+                        "position_bottom": true
+                    },
+                    {
+                        "action": "sleep",
+                        "duration": 3
+                    },
+                    {
+                        "action": "scroll_window_to_position",
+                        "position_top": true
+                    },
+                    {
+                        "action": "sleep",
+                        "duration": 0.5
+                    }
+                ]
+            },
+            "pages": [
+                {
+                    "path": [
+                        "/about"
+                    ],
+                    "actions": [
+                        {
+                            "action": "for_each",
+                            "css_selector": "div.profile",
+                            "actions": [
+                                {
+                                    "action": "scroll_window_to_element",
+                                    "element": true
+                                },
+                                {
+                                    "action": "hover",
+                                    "element": true
+                                },
+                                {
+                                    "action": "sleep",
+                                    "duration": 2
+                                },
+                                {
+                                    "action": "capture",
+                                    "suffix": "profile_hover",
+                                    "viewport_only": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "path": [
+                        "/careers"
+                    ],
+                    "actions": [
+                        {
+                            "action": "sleep",
+                            "duration": 4
+                        },
+                        {
+                            "action": "scroll_window_to_element",
+                            "css_selector": "div button.IconLauncher__CircleLauncher-sc-13j7v1i-2"
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "div button.IconLauncher__CircleLauncher-sc-13j7v1i-2"
+                        },
+                        {
+                            "action": "scroll_window_to_position",
+                            "position_top": true
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "chatbox_open"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
