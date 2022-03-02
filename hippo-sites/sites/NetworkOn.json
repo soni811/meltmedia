@@ -1,0 +1,47 @@
+{
+    "project": "NetworkOn",
+    "site_paths": [
+        "/case-studies/"
+    ],
+    "environments": {
+        "desktop": {
+            "before_screenshot": {
+                "actions": [
+                    {
+                        "action": "scroll_window_to_position",
+                        "position_bottom": true
+                    },
+                    {
+                        "action": "sleep",
+                        "duration": 1
+                    },
+                    {
+                        "action": "scroll_window_to_position",
+                        "position_top": true
+                    },
+                    {
+                        "action": "sleep",
+                        "duration": 1
+                    },
+                    {
+                        "action": "capture"
+                    }
+                ]
+            },
+            "pages": [
+                {
+                    "path": "/HOME",
+                    "actions": [
+                        {
+                            "action": "scroll_window_to_position",
+                            "position_bottom": true
+                        },
+                        {
+                            "action": "capture"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
