@@ -1,0 +1,58 @@
+{
+    "project": "pixabay",
+    "environments": {
+        "desktop": {
+            "pages": [
+                {
+                    "path": "/",
+                    "actions": [
+                        {
+                            "action": "scroll_window_to_position",
+                            "position_bottom": true
+                        },
+                        {
+                            "action": "capture"
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": ".popularSearches--MX3gj > a:nth-child(3)"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 2
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "walpapaer"
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "div.container--3B4Kp:nth-child(2) > button:nth-child(1)"
+                        },
+                        {
+                            "action": "sleep",
+                            "duration": 2
+                        }
+                    ]
+                },
+                {
+                    "path": "/sound-effects/",
+                    "actions": [
+                        {
+                            "action": "capture"
+                        },
+                        {
+                            "action": "click",
+                            "css_selector": "div.audio-category-container:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(2)"
+                        },
+                        {
+                            "action": "capture",
+                            "suffix": "nature",
+                            "viewport_only": false
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

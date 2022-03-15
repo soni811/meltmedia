@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# clear the log file
+echo "starting hippo on $(date)" > "$HOME/hippo-startup.log"
+bash /usr/local/bin/hippo-run.sh &> "$HOME/hippo-startup.log" &

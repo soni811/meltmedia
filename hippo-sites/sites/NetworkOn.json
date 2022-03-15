@@ -1,0 +1,24 @@
+{
+    "project": "NetworkOn",
+    "site_paths": [
+        "/"
+    ],
+    "environments": {
+        "desktop": {
+            "pages": [
+                {
+                    "path": "/",
+                    "actions": [
+                        {
+                            "action": "scroll_window_to_position",
+                            "position_bottom": true
+                        },
+                        {
+                            "action": "capture"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

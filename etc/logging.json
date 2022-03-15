@@ -1,0 +1,42 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "simple": {
+            "format": "%(asctime)s [%(name)s] %(levelname)s %(message)s",
+            "datefmt": "%Y-%m-%d %I:%M:%S %p"
+        }
+    },
+
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "level": "DEBUG",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        },
+
+        "graylog": {
+            "class": "graypy.GELFHandler",
+            "level": "INFO",
+            "facility": "hippo",
+            "host": "syslog.us-west-1.meltdev.com",
+            "port": 12201
+        }
+    },
+
+    "root": {
+        "level": "DEBUG",
+        "handlers": ["console", "graylog"]
+    },
+
+    "loggers": {
+        "requests": {
+            "level": "WARN"
+        },
+
+        "boto": {
+            "level": "WARN"
+        }
+    }
+}

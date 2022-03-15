@@ -1,0 +1,415 @@
+{
+    "_desktop_nav_dropdowns": [
+        {
+            "action": "for_each",
+            "css_selector": ".cmp-masthead__primary-nav-dropdown-button",
+            "actions": [
+                {
+                    "action": "hover",
+                    "element": true
+                },
+                {
+                    "action": "sleep",
+                    "duration": 5
+                },
+                {
+                    "action": "capture"
+                }
+            ]
+        }
+    ],
+    "_desktop_tabs": [
+        {
+            "action": "for_each",
+            "css_selector": ".cmp-tabs__scroll-outer a",
+            "actions": [
+                {
+                    "action": "scroll_window_to_element",
+                    "element": true
+                },
+                {
+                    "action": "click",
+                    "element": true
+                },
+                {
+                    "action": "sleep",
+                    "duration": 5
+                },
+                {
+                    "action": "scroll_window_to_position"
+                },
+                {
+                    "action": "capture",
+                    "suffix": "tab_panel"
+                }
+            ]
+        }
+    ],
+    "_desktop_hcp_modal": [
+        {
+            "action": "click",
+            "css_selector": "span.cmp-masthead__utility-nav-item-text"
+        },
+        {
+            "action": "sleep",
+            "duration": 3
+        },
+        {
+            "action": "capture"
+        }
+    ],
+    "_faq_accordions": [
+        {
+            "action": "sleep",
+            "duration": 5
+        },
+        {
+            "action": "capture"
+        },
+        {
+            "action": "for_each",
+            "css_selector": "button.cmp-accordion__button",
+            "actions": [
+                {
+                    "action": "scroll_window_to_element",
+                    "element": true
+                },
+                {
+                    "action": "sleep",
+                    "duration": 2
+                },
+                {
+                    "action": "click",
+                    "element": true
+                },
+                {
+                    "action": "sleep",
+                    "duration": 2
+                }
+            ]
+        },
+        {
+            "action": "capture",
+            "suffix": "faq_accordions"
+        }
+    ],
+    "_utility_desktop_hcp_modal": [
+        {
+            "action": "click",
+            "css_selector": "span.cmp-masthead__feature-link-text"
+        },
+        {
+            "action": "capture"
+        }        
+    ],
+    "_utility_desktop_nav_tabs": [
+        {
+            "action": "for_each",
+            "css_selector": ".cmp-masthead__primary-nav__inner",
+            "actions": [
+                {
+                    "action": "scroll_window_to_element",
+                    "element": true
+                },
+                {
+                    "action": "click",
+                    "element": true
+                },
+                {
+                    "action": "sleep",
+                    "duration": 5
+                },
+                {
+                    "action": "scroll_window_to_position"
+                },
+                {
+                    "action": "capture",
+                    "suffix": "utility_tab_panel"
+                }
+            ]
+        }
+    ],
+    "_brightcove_video_transcript_accordion": [
+        {
+            "action": "scroll_window_to_element",
+            "css_selector": ".cmp-brightcoveplayer__marquee .cmp-brightcoveplayer__transcript-link"
+        },
+        {
+            "action": "click",
+            "css_selector": ".cmp-brightcoveplayer__marquee .cmp-brightcoveplayer__transcript-link"
+        },
+        {
+            "action": "capture",
+            "suffix": "video_transcript"
+        }
+    ],
+    "_capture_expanded_transcript": [
+        {
+            "action": "sleep",
+            "duration": 3
+        },
+        {
+            "action": "capture"
+        },
+        {
+            "action": "click",
+            "css_selector": ".cmp-accordion__ui-icon--plus"
+        },
+        {
+            "action": "sleep",
+            "duration": 5
+        },
+        {
+            "action": "capture",
+            "suffix": "accordion_expanded"
+        }
+    ],
+    "_mobile_nav": [
+        {
+            "action": "click",
+            "css_selector": ".cmp-masthead__menu-button-icon"
+        },
+        {
+            "action": "capture"
+        }
+    ],
+    "_mobile_nav_dropdowns": [
+        {
+            "action": "sleep",
+            "duration": 4
+        },
+        {
+            "action": "resize_browser",
+           "content_height": true
+        },
+        {
+            "action": "scroll_window_to_position",
+            "position_top": true
+        },
+        {
+            "action": "sleep",
+            "duration": 4
+        },
+        {
+            "action": "for_each",
+            "css_selector": ".cmp-masthead__primary-nav-dropdown-button-icon",
+            "actions": [
+                {
+                    "action": "click",
+                    "element": true
+                },
+                {
+                    "action": "capture",
+                    "suffix": "nav_dropdown_items"
+                }
+            ]    
+        }
+    ],
+    "_mobile_hcp_modal": [
+        {
+            "action": "click",
+            "css_selector": ".cmp-masthead__utility-nav-mobile-item:first-child"
+        },
+        {
+            "action": "capture",
+            "suffix": "hcp_modal"
+        }
+    ],
+    "_utility_mobile_hcp_modal": [
+        {
+            "action": "click",
+            "css_selector": ".cmp-masthead__feature-link:first-child"
+        },
+        {
+            "action": "capture",
+            "suffix": "utility_hcp_modal"
+        }
+    ],
+    "_base_car_form": [
+        {
+            "action": "resize_browser",
+            "content_height": true
+        },
+        {
+            "action": "scroll_window_to_position",
+            "position_top": true
+        },
+        {
+            "action": "capture"
+        },
+        {
+            "action": "scroll_window_to_element",
+            "css_selector": "div.button button[type='submit']"
+        },
+        {
+            "action": "sleep",
+            "duration": 4
+        },
+        {
+            "action": "click",
+            "css_selector": "div.button button[type='submit']"
+        },
+        {
+            "action": "capture",
+            "suffix": "invalid_boxes_car_form"
+        }
+    ],
+    "_invalid_car": [
+        {
+            "action": "scroll_window_to_element",
+            "css_selector": "[name='email-address']"
+        },
+        {
+            "action": "enter_text",
+            "css_selector": "[name='email-address']",
+            "input": "MELT"
+        },
+        {
+            "action": "enter_text",
+            "css_selector": "[name='zip-code-base']",
+            "input": "zipCode"
+        },
+        {
+            "action": "enter_text",
+            "css_selector": "[name='primary-phone-number']",
+            "input": "4"
+        },
+        {
+            "action": "click",
+            "css_selector": "div.button button[type='submit']"
+        },
+        {
+            "action": "capture",
+            "suffix": "invalid_email_zip_number"
+        }
+    ],
+    "_success_car": [
+        {
+            "action": "hide_element",
+            "css_selector": "#auto-935f-6f2a9e9e803e"
+        },
+        {
+            "action": "sleep",
+            "duration": 1
+        },
+        {
+            "action": "execute_script",
+            "script": "document.querySelectorAll('.cmp-form-container--thank-you-message')[0].classList.remove('hidden-publish-view');"
+        },
+        {
+            "action": "sleep",
+            "duration": 5
+        },
+        {
+            "action": "capture",
+            "suffix": "success"
+        }
+    ],
+    "_pat": [
+        {
+            "action": "click",
+            "css_selector": "div.cmp-pat__options button.cmp-pat__options-button.yes"
+        },
+        {
+            "action": "sleep",
+            "duration": 3
+        },
+        {
+            "action": "capture"
+        }
+    ],
+    "capture_desktop_pat_full_page": [
+        {
+            "action": "resize_browser",
+            "content_height": true
+        },
+        {
+            "action": "sleep",
+            "duration": 1
+        },
+        {
+            "action": "external",
+            "library": "gene_aem_core",
+            "ref": [
+                "_capture_pat_more_info_tooltips_full_page",
+                "_capture_pat_results_full_page"
+            ]
+        },
+        {
+            "action": "resize_browser"
+        },
+        {
+            "action": "refresh"
+        }
+    ],
+    "_capture_pat_more_info_tooltips_full_page": [
+        {
+            "action": "execute_script",
+            "script": "var el = document.querySelectorAll('ul.cmp-pat__items li');for(var i =0; i < el.length; i++){el[i].classList.add('active')}"
+        },
+        {
+            "action": "for_each",
+            "css_selector": ".cmp-pat__item .cmp-pat__more-info",
+            "actions": [
+                {
+                    "action": "scroll_window_to_element",
+                    "element": true
+                },
+                {
+                    "action": "click",
+                    "element": true
+                },
+                {
+                    "action": "sleep",
+                    "duration": 2
+                },
+                {
+                    "action": "capture",
+                    "suffix": "pat_more_info_tooltip"
+                },
+                {
+                    "action": "click",
+                    "css_selector": ".tooltipster-base.tooltipster-show .cmp-tooltip__close"
+                },
+                {
+                    "action": "sleep",
+                    "duration": 2
+                }
+            ]
+        }
+    ],
+    "_capture_pat_results_full_page": [
+        {
+            "action": "hide_element",
+            "css_selector": ".cmp-pat__main-content"
+        },
+        {
+            "action": "for_each",
+            "css_selector": ".cmp-pat__header button",
+            "actions": [
+                {
+                    "action": "show_element",
+                    "element": true
+                }
+            ]
+        },
+        {
+            "action": "for_each",
+            "css_selector": ".cmp-pat__results",
+            "actions": [
+                {
+                    "action": "show_element",
+                    "element": true
+                },
+                {
+                    "action": "capture",
+                    "suffix": "pat_result"
+                },
+                {
+                    "action": "hide_element",
+                    "element": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+	"project": "networkon-15",
+	"site_paths": [
+		"/features/"
+	],
+	"environments": {
+		"desktop": {
+			"before_screenshot": {
+				"actions": [{
+						"action": "scroll_window_to_position",
+						"position_bottom": true
+					},
+					{
+						"action": "click",
+						"css_selector": "div.show > div:nth-child(1) > div:nth-child(1) > ul:nth-child(2)"
+					},
+					{
+						"action": "sleep",
+						"duration": 2
+					},
+					{
+						"action": "scroll_window_to_position",
+						"position_top": true
+					},
+					{
+						"action": "sleep",
+						"duration": 2
+					},
+					{
+						"action": "capture"
+					}
+				]
+			},
+			"pages": [{
+				"path": "/HOME",
+				"actions": [{
+						"action": "scroll_window_to_position",
+						"position_bottom": true
+					},
+					{
+						"action": "capture"
+					}
+				]
+			}]
+		}
+	}
+}

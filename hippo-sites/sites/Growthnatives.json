@@ -1,0 +1,88 @@
+{
+    "project":"growthnatives-test",
+    "sites_paths":[
+        "/HOME"
+    ],
+    "enviroments":{
+        "desktop":{
+            "before_srcreenshot":{
+                "actions":[
+                    {
+                    "actions":"click",
+                    "css_selector":".d-flex"
+                    },
+                    {
+                        "action": "scroll_window_to_position",
+                        "position_bottom": true
+                    },
+                    {
+                        "action": "sleep",
+                        "duration": 1
+                    }       
+                ]
+            },
+            "pages":[
+                {
+                "path":"/STRATEGY SERVICES",
+                "actions":[
+                    {
+                        "actions":"click",
+                        "css_selector":".slider_image_txt"
+                    },
+                    {
+                        "action": "capture"
+                    },
+                    {
+                        "action": "sleep",
+                        "duration": 2
+                    },
+                    {
+                        "path":"/Development Services",
+                        "actions":[
+                            {
+                                "action": "capture"
+                            },
+                            {
+                                "actions":"click",
+                                "css_selector":"div.lets-talk-dev:nth-child(2)"
+                            },
+                            {
+                                "action": "capture",
+                                "suffix": "hcp_modal",
+                                "viewport_only": true
+                            },
+                            {
+                                "action": "refresh"
+                            },
+                            {
+                                "action": "sleep",
+                                "duration": 1
+                            },
+                            {
+                                "path": [
+                                    "/Resources"
+                                ],
+                                "actions": [
+                                    {
+                                        "action": "sleep",
+                                        "duration": 2
+                                    },
+                                    {
+                                        "action": "click",
+                                        "css_selector": ".resources-banner-text > h1:nth-child(1)"
+                                    },
+                                    {
+                                        "action": "capture",
+                                        "suffix": "safety_modal"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+            
+        ]    
+        }
+    }
+}
